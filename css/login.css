@@ -1,0 +1,145 @@
+/* Centered Container */
+.auth-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* The Card */
+.auth-box {
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Typography */
+h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background-color: #121212;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+/* Button */
+.btn-auth {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-auth:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Switcher (Login <-> Register) */
+.switch-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.switch-text span {
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Messages */
+.error-msg {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff4444;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00C851;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Update .auth-box to handle long forms */
+.auth-box {
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px; /* Slightly wider */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+    animation: fadeIn 0.5s ease;
+    
+    /* Scroll Logic for long form */
+    max-height: 90vh; /* Don't go off screen */
+    overflow-y: auto; /* Scroll if too tall */
+}
+
+/* Custom Scrollbar for the box */
+.auth-box::-webkit-scrollbar {
+    width: 8px;
+}
+.auth-box::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 4px;
+}

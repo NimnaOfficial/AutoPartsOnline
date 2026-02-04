@@ -1,0 +1,97 @@
+.checkout-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.checkout-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.checkout-header h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.checkout-header p {
+    color: #aaa;
+}
+
+/* LAYOUT */
+.checkout-layout {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.checkout-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    flex: 1;
+    min-width: 300px;
+}
+
+.checkout-card h3 {
+    color: var(--primary);
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* DETAILS STYLING */
+.label {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.value {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* SUMMARY CARD */
+.summary-card {
+    background-color: #1a1a1a;
+    border: 1px solid var(--primary);
+}
+
+.product-preview {
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.confirm-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm-btn:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
+}
