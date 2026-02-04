@@ -1,0 +1,9 @@
+.cart-container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+.cart-table { background: var(--card-bg); padding: 20px; border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #333; color: white; }
+.remove-btn { color: red; font-weight: bold; cursor: pointer; }
+.cart-summary { margin-top: 20px; text-align: right; }
+.cart-summary h3 { color: white; margin-bottom: 15px; font-size: 1.5rem; }
+.checkout-btn { background: var(--primary); color: white; padding: 12px 25px; border-radius: 5px; font-weight: bold; }
+.checkout-btn:hover { background: var(--primary-hover); }

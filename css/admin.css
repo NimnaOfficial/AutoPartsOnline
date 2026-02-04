@@ -1,0 +1,203 @@
+/* ========================
+   DASHBOARD LAYOUT
+   ======================== */
+.admin-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* LEFT: Form Container */
+.admin-container {
+    flex: 1;
+    min-width: 350px;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    height: fit-content;
+}
+
+/* RIGHT: Inventory Table Container */
+.inventory-container {
+    flex: 2; /* Takes up more space */
+    min-width: 500px;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* ========================
+   FORM STYLES
+   ======================== */
+.form-group { margin-bottom: 15px; }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: white;
+    font-family: var(--font-main);
+    outline: none;
+}
+
+input:focus, textarea:focus { border-color: var(--primary); }
+
+button[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover { background-color: var(--primary-hover); }
+
+/* ========================
+   TABLE STYLES
+   ======================== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    font-size: 0.95rem;
+}
+
+th {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+td { color: white; vertical-align: middle; }
+
+.table-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+/* Action Buttons */
+.action-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.edit-btn {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+
+.delete-btn {
+    background-color: #F44336; /* Red */
+    color: white;
+}
+
+.edit-btn:hover { background-color: #1976D2; }
+.delete-btn:hover { background-color: #D32F2F; }
+
+/* ========================
+   LOGIN OVERLAY (Unchanged)
+   ======================== */
+.login-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 9999; backdrop-filter: blur(8px);
+}
+
+.login-card {
+    background-color: var(--card-bg); padding: 40px; border-radius: 15px;
+    border: 1px solid var(--border); width: 100%; max-width: 420px;
+    text-align: center; box-shadow: 0 0 40px rgba(255, 69, 0, 0.2);
+}
+
+/* Responsive Mobile */
+@media (max-width: 900px) {
+    .admin-wrapper { flex-direction: column; }
+    .inventory-container { min-width: 100%; }
+}
+/* Styles for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links initially on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when toggled via JS */
+    }
+
+    /* Add a menu button (Hamburger) in your HTML */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+.profile-container, .contact-container {
+    width: 95%; 
+    margin: 20px auto;
+}
+
+/* Make form rows stack vertically on mobile */
+@media screen and (max-width: 600px) {
+    .form-row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group.half {
+        width: 100%;
+    }
+}

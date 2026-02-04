@@ -1,0 +1,146 @@
+/* CONTAINER */
+.product-view-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    margin-bottom: 30px;
+}
+
+.breadcrumb a {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* LAYOUT: SPLIT SCREEN */
+.product-layout {
+    display: flex;
+    gap: 50px;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+
+/* LEFT: IMAGE */
+.product-image-large {
+    flex: 1; /* Takes 50% width */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+}
+
+.product-image-large img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* RIGHT: INFO */
+.product-info {
+    flex: 1; /* Takes 50% width */
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.product-price {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.stock-badge {
+    display: inline-block;
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #4CAF50;
+}
+
+.product-desc {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.buy-btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.login-alert-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    border: 1px dashed #666;
+}
+
+.login-alert-btn:hover {
+    background-color: #444;
+    border-color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .product-layout {
+        flex-direction: column;
+    }
+}
+/* Add this to css/product.css */
+.cart-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #333; /* Dark Grey */
+    color: white;
+    border: 1px solid #555;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background-color: #444;
+    border-color: white;
+}
